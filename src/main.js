@@ -24,9 +24,11 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 
 const routes = [
+  {path: '/', name: 'index', component: App, children: [
    { path: '/goods', component: goods },
    { path: '/ratings', component: ratings },
    { path: '/seller', component: seller }
+   ]}
 ];
 
 //路由定义
@@ -43,4 +45,5 @@ const app = new Vue({
 
 //加载首页跳转路径
 router.push('/goods');
+export default app;
 
